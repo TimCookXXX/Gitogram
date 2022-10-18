@@ -72,7 +72,7 @@ export default {
   },
   async created () {
     try {
-      const { data } = await api.trandings.getTrendings()
+      const { data } = await api.trendings.getTrendings()
 
       this.items = data.items
     } catch (error) {

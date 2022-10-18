@@ -26,6 +26,13 @@ export default {
   },
   beforeUnmount () {
     this.$refs.indicator.removeEventListener('transitionend', this.emitOnFinish)
+  },
+  watch: {
+    active () {
+      setTimeout(() => {
+        this.active = true
+      }, 0)
+    }
   }
 }
 </script>

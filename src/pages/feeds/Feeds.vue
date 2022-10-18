@@ -9,12 +9,12 @@
         <ul class="stories">
           <li
             class="stories-item"
-            v-for="item in items"
+            v-for="item in trendings"
             :key="item.id"
           >
             <story-user-item
               v-bind="getFeedData(item)"
-              @onPress="handlePress(story.id)"
+              @onPress="$router.push({name: 'stories', params: {initialSlide: item.id}})"
             />
           </li>
         </ul>
@@ -22,6 +22,7 @@
     </Header>
   </div>
   <user-content />
+  <pre>{{ trendings }}</pre>
 </template>
 
 <script>
@@ -32,6 +33,7 @@ import userContent from '@/components/userContent/userContent.vue'
 import navigation from '@/components/navigation/navigation.vue'
 import logo from '@/components/logo/logo.vue'
 import * as api from '../../components/api'
+import { mapActions, mapState } from 'vuex'
 export default {
   name: 'Feeds',
   components: {
@@ -41,9 +43,14 @@ export default {
     navigation,
     logo
   },
+  computed: {
+    ...mapState({
+      trendings: (state) => state.trendings.data
+    })
+  },
   async created () {
     try {
-      const { data } = await api.trandings.getTrendings()
+      const { data } = await api.trendings.getTrendings()
       this.items = data.items
     } catch (error) {
       console.log(error)
@@ -64,7 +71,13 @@ export default {
         avatar: item.owner.avatar_url,
         username: item.owner.login
       }
-    }
+    },
+    ...mapActions({
+      fetchTrendings: 'trendings/fetchTrendings'
+    })
+  },
+  mounted () {
+    this.fetchTrendings()
   }
 }
 </script>

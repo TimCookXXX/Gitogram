@@ -2,7 +2,7 @@
   <div class="slider">
     <div class="header">
       <Xprogress />
-      <user 
+      <user
       avatar="https://shapka-youtube.ru/wp-content/uploads/2020/07/letter-c.jpg"
       username="Tim"
       />
