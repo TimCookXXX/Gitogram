@@ -3,7 +3,7 @@
     <header class="header">
       <div class="x-container">
         <button class="logo" @click="$router.push('/')">
-          <logo white />
+          <logo />
         </button>
         <button class="close-btn" @click="$router.push('/')">
           <icon name="close-btn" />
@@ -26,7 +26,6 @@ export default {
     logo,
     storiesSlider
   }
-
 }
 </script>
 

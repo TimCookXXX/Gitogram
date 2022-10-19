@@ -2,6 +2,10 @@
   padding: 20px;
   overflow-y: auto;
   max-height: 470px;
+  flex: 1;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
   p {
     margin: 0;
   }
@@ -14,15 +18,19 @@
 }
 
 .c-story-post-item {
-  height: 664px;
+  max-height: 664px;
   transform: scale(.8);
   width: 375px;
   transition: .4s;
+  filter: brightness(0.4);
+  position: relative;
 
   &.active {
     transform: scale(1);
     pointer-events: initial;
     user-select: initial;
+    filter: none;
+    z-index: 9999;
   }
 }
 
@@ -30,8 +38,8 @@
   border-radius: 8px;
   background: rgba(0, 0, 0, 0.0001);
   border: 1px solid #CACACA;
-  position: relative;
-  background: #fff
+  background: #FFFFFF;
+  height: 100%;
 }
 
 .header {
@@ -61,6 +69,7 @@
   align-items: center;
   background: #FFFFFF;
   top: 50%;
+  z-index: 9999;
 
   &.btn-next {
     transform: rotate(180deg);
@@ -86,4 +95,11 @@
 }
 .btn-next {
   right: -58px;
+}
+
+.spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

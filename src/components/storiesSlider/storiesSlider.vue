@@ -10,7 +10,7 @@
           :btnsShown="activeBtns"
           @next="handleSlide(ndx + 1)"
           @prev="handleSlide(ndx - 1)"
-          @progressFinish="handleSlide(ndx + 1)"
+          @onFinish="handleSlide(ndx + 1)"
           />
         </li>
       </ul>
@@ -30,7 +30,7 @@ export default {
       type: Number
     }
   },
-  emits: ['progressFinish', 'onNext', 'onPrev'],
+  emits: ['onFinish', 'onNext', 'onPrev'],
   data () {
     return {
       slideNdx: 0,

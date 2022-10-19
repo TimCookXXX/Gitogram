@@ -2,7 +2,7 @@
   <div class="header">
     <Header>
       <template #headline>
-        <logo />
+        <logo class="logo logo-stories"/>
         <navigation />
       </template>
       <template #content>
@@ -22,7 +22,6 @@
     </Header>
   </div>
   <user-content />
-  <pre>{{ trendings }}</pre>
 </template>
 
 <script>

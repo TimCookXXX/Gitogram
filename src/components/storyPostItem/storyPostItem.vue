@@ -3,7 +3,7 @@
     <div class="stories-container">
       <div class="header">
         <div class="progess">
-          <xprogress :active="active" @onFinish="$emit('progressFinish')" />
+          <xprogress :active="active" @onFinish="$emit('onFinish')" />
         </div>
         <div class="user">
           <user class="user" :username="data.username" :avatar="data.avatar" />
@@ -11,7 +11,7 @@
       </div>
       <div class="content">
         <div class="loader" v-if="loading">
-          <spinner />
+          <spinner class="spinner" />
         </div>
         <div class="info" v-else>
           <div v-if="data.content?.length" class="content-text" v-html="data.content"></div>
