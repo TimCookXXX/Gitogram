@@ -1,5 +1,5 @@
 <template>
-  <div :class="{active: startrogress}" class="c-progress">
+  <div :class="{active: startProgress}" class="c-progress">
     <div ref="indicator" class="indicator"></div>
   </div>
 </template>
