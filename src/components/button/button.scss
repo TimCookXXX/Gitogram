@@ -3,6 +3,11 @@
   height: 44px;
   background: #31AE54;
   border-radius: 5px;
+  transition: .4s;
+
+    &:hover {
+      transition: .4s;
+    }
 
     &.hover-text:hover {
         font-family: 'Open Sans';
@@ -33,4 +38,7 @@
   font-size: 16px;
   line-height: 22px;
   color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
