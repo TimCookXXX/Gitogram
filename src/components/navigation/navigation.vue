@@ -5,9 +5,9 @@
     </div>
     <div class="user-photo">
       <img
-        src="https://shapka-youtube.ru/wp-content/uploads/2020/07/letter-c.jpg"
+        :src="src"
         class="img-avatar"
-        alt="user photo"
+        :alt="`${username} avatar`"
       />
     </div>
     <div @click="logout" class="logout">
@@ -22,6 +22,14 @@ import Icon from '../../icons/icon.vue'
 export default {
   components: {
     Icon
+  },
+  props: {
+    src: {
+      type: String
+    },
+    username: {
+      type: String
+    }
   },
   methods: {
     ...mapActions({

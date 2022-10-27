@@ -9,27 +9,27 @@
       transition: .4s;
     }
 
-    &.hover-text:hover {
-        font-family: 'Open Sans';
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 22px;
-        color: #FFFFFF;
-
-          &:hover {
-            .btn-text {
-              display: none;
-            }
-          }
-
-        &:after {
-          content: attr(data-hover-text);
-        }
-    }
-
-    &.theme-green:hover {
+    &.theme-grey {
       background: #9E9E9E;
+
+      &:hover {
+        background: #7c7c7c;
+      }
     }
+
+    &.theme-green {
+      background: #31AE54;
+
+      &:hover {
+      background: #208C32;
+    }
+  }
+}
+
+.c-button.theme-blood-green {
+  &:hover {
+    background: #208C32;
+  }
 }
 
 .btn-text {

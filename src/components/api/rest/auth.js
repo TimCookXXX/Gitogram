@@ -1,12 +1,12 @@
 import { makeRequest } from '../requests'
 import env from '../../../../env'
 
-export const getAccessTokenByPersonalCode = (code, clientId = env.clientId, clientSecret = env.clientSecret) => makeRequest({
+export const getAccessTokenByPersonalCode = (code) => makeRequest({
   url: 'https://webdev-api.loftschool.com/github',
   method: 'post',
   data: {
-    clientId,
-    clientSecret,
+    clientId: env.clientId,
+    clientSecret: env.clientSecret,
     code
   }
 })
