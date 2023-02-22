@@ -20,7 +20,6 @@ https://timcookxxx.github.io/Gitogram/dist
 \
 \
 \
-<em>Проект был выполнен в рамках обучения в Loftschool</em>
 
 ## Project setup
 ```
