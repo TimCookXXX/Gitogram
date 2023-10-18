@@ -1,3 +1,5 @@
+@import '../../vars.scss';
+
 .c-subscription {
   display: flex;
   align-items: center;
@@ -6,4 +8,8 @@
 
 .x-button {
   width: 115px;
+
+  @include tablets {
+    width: 94px;
+  }
 }

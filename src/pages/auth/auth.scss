@@ -1,27 +1,34 @@
+@import '../../vars.scss';
+
 .c-auth {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  // position: absolute;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
 }
 
-.auth-content {
+.auth-content-info {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 135%);
+  z-index: 1;
+
+  @include tablets {
+    transform: translate(-50%, 150%);
+  }
 }
 
 .auth-logo {
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
 .auth-info {
-  margin-bottom: 41px;
+  margin-bottom: 38px;
   text-align: center;
-}
-
-.auth-btn {
-  margin-bottom: 60px;
 }
 
 .auth-info-text {
@@ -33,4 +40,27 @@
 
 .logo-icon {
   margin-left: 12px;
+}
+
+.auth-back {
+  background-image: url('../../assets/bg-desktop.png');
+  position: absolute;
+  background-repeat: no-repeat;
+  width: 807px;
+  height: 514px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @include tablets {
+    background-image: url('../../assets/bg-tablets.png');
+    max-width: 618px;
+    height: 513px;
+  }
+
+  @media screen and (max-width: 630px) {
+    background-image: url('../../assets/bg-phone.png');
+    width: 296px;
+    height: 439px;
+  }
 }

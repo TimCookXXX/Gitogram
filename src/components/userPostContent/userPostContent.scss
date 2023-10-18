@@ -1,3 +1,5 @@
+@import '../../vars.scss';
+
 .user__post-content {
   background: #FFFFFF;
   border: 1px solid #F1F1F1;
@@ -14,8 +16,16 @@
   font-size: 26px;
   line-height: 28px;
   margin-bottom: 21px;
+
+  @include phones {
+    font-size: 20px;
+  }
 }
 
 .user__post-desc {
   margin-bottom: 35px;
+
+  @include phones {
+    font-size: 12px;
+  }
 }

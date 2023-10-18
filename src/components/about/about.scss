@@ -1,4 +1,7 @@
+@import '../../vars.scss';
+
 .c-user {
+  gap: 14px;
   display: flex;
   align-items: center;
 }
@@ -24,6 +27,10 @@
   font-size: 24px;
   line-height: 29px;
   color: #262626;
+
+  @include phones {
+    font-size: 18px;
+  }
 }
 
 .data {
@@ -31,6 +38,10 @@
   font-size: 14px;
   line-height: 17px;
   color: #9E9E9E;
+
+  @include phones {
+    font-size: 10px;
+  }
 }
 
 .stats-int {
@@ -38,12 +49,20 @@
   font-size: 14px;
   line-height: 21px;
   color: #262626;
+
+  @include phones {
+    font-size: 12px;
+  }
 }
 
 .stats-title {
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
+
+  @include phones {
+    font-size: 10px;
+  }
 }
 
 .watchers {

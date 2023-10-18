@@ -1,3 +1,5 @@
+@import '../../vars.scss';
+
 .content {
   padding: 20px;
   overflow-y: auto;
@@ -20,7 +22,7 @@
   max-height: 664px;
   transform: scale(.8);
   width: 375px;
-  transition: .4s;
+  // transition: .4s;
   filter: brightness(0.4);
   position: relative;
   pointer-events: none;
@@ -95,9 +97,13 @@
 
 .btn-prev {
   left: -58px;
+
+  @include tablets {
+    left: -10px;
+  }
 }
 .btn-next {
-  right: -58px;
+  right: -10px;
 }
 
 .spinner {

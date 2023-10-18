@@ -1,8 +1,14 @@
+@import '../../vars.scss';
+
 .ratings__star-title {
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   color: #24292E;
+
+  @include phones {
+    font-size: 10px;
+  }
 }
 
 .ratings__item-num {
@@ -10,12 +16,20 @@
   font-size: 12px;
   line-height: 18px;
   color: #24292E;
+
+  @include phones {
+    font-size: 10px;
+  }
 }
 
 .ratings__item-title {
   font-weight: 600;
   font-size: 12px;
   line-height: 18px;
+
+  @include phones {
+    font-size: 10px;
+  }
 }
 
 .ratings__fork-title {
@@ -23,6 +37,10 @@
   font-size: 12px;
   line-height: 18px;
   color: #24292E;
+
+  @include phones {
+    font-size: 10px;
+  }
 }
 
 .ratings__list {
@@ -46,6 +64,13 @@
 
     &:last-child {
       border-right: none;
+    }
+
+    @include phones {
+      svg {
+        width: 10px;
+        height: 10px;
+      }
     }
 }
 

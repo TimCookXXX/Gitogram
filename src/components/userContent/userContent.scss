@@ -1,3 +1,5 @@
+@import '../../vars.scss';
+
 .oops {
 font-weight: 400;
 font-size: 14px;
@@ -21,6 +23,11 @@ margin-bottom: 21px;
 
 .user-post-container {
   margin: 0 auto;
-  width: 985px;
+  max-width: 985px;
   margin-bottom: 30px;
+
+
+  @include tablets {
+    padding: 0 20px 0 20px;
+  }
 }

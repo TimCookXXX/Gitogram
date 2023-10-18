@@ -1,3 +1,5 @@
+@import '../../vars.scss';
+
 .container {
   display: flex;
   flex-direction: column;
@@ -7,12 +9,23 @@
 .wrapper {
   display: flex;
   flex: 1;
+
+  @include tablets {
+    flex-direction: column;
+  }
 }
 
 .user {
   flex: 1;
   border-right: 1px solid #D3D3D3;
   padding: 40px 30px 0 0;
+
+  @include tablets {
+    border-right: none;
+    padding: 0 0 40px 20px;
+    background-color: #FAFAFA;
+    border-bottom: 1px solid #C6C6C8;
+  }
 }
 
 .title {
@@ -20,13 +33,25 @@
   font-size: 26px;
   line-height: 28px;
   margin-bottom: 36px;
+
+  @include tablets {
+    display: none;
+  }
 }
 
 .content {
   flex: 2;
   padding: 40px 0 0 74px;
+
+  @include tablets {
+    padding: 24px 20px 14px 20px;
+  }
 }
 
 .header {
   margin-bottom: 0;
+
+  @include tablets {
+    border-bottom: 0;
+  }
 }

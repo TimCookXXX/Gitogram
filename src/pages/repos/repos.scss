@@ -1,3 +1,5 @@
+@import '../../vars.scss';
+
 .loader {
   display: flex;
   align-items: center;
@@ -6,4 +8,8 @@
 
 .header {
   margin-bottom: 36px;
+
+  @include tablets {
+    display: none;
+  }
 }

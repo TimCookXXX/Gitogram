@@ -51,6 +51,19 @@ button {
 }
 
 .x-container {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;  
+  height: 6px;            
+}
+*::-webkit-scrollbar-track {
+  background: rgb(253, 253, 253);       
+}
+*::-webkit-scrollbar-thumb {
+  background-color: green;   
+  border-radius: 20px;      
+
 }

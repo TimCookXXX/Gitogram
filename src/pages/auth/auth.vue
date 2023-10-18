@@ -1,25 +1,25 @@
 <template>
   <div class="c-auth">
     <div class="auth-content">
-      <div class="auth-logo">
-        <icon name="logo" />
+      <div class="auth-content-info">
+        <div class="auth-logo">
+          <icon name="logo" />
+        </div>
+        <div class="auth-info">
+          <span class="auth-info-text">
+            More than just one repository.
+            <br>
+            This is our digital world.
+          </span>
+        </div>
+        <div class="auth-btn">
+          <Xbutton @click="redirectToGhAuth">
+            <span>Authorize with github</span>
+            <span class="logo-icon"><icon name="gitLogo" /></span>
+          </Xbutton>
+        </div>
       </div>
-      <div class="auth-info">
-        <span class="auth-info-text">
-          More than just one repository.
-          <br>
-          This is our digital world.
-        </span>
-      </div>
-      <div class="auth-btn">
-        <Xbutton @click="redirectToGhAuth">
-          <span>Authorize with github</span>
-          <span class="logo-icon"><icon name="gitLogo" /></span>
-        </Xbutton>
-      </div>
-      <div class="auth-back">
-        <icon name="authLogo" />
-      </div>
+      <div class="auth-back"></div>
     </div>
   </div>
 </template>

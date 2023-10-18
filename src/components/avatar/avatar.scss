@@ -1,7 +1,20 @@
+@import '../../vars.scss';
+
 .profile-avatar-img {
-  margin-right: 14px;
   width: 90px;
   height: 90px;
   border: 0.5px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+
+  @include phones {
+    width: 62px;
+    height: 62px;
+  }
+}
+
+.profile-img {
+  @include phones {
+    width: 62px;
+    height: 62px;
+  }
 }
